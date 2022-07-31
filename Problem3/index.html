@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student card generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1 class="head">Campus ID Card </h1>
+
+  <div class="maincontainer">
+    <center>
+      <div class="detail" style="flex-grow: 100">
+        <form>
+          <h2 class="h2">Plz fill-in the form</h2>
+          <label>Enter Name:</label>
+          <input type="text" id="inname" placeholder="Name...">
+          <label>Date of birth:</label>
+          <input type="date" id="inBirth" placeholder="Birth....">
+          <label>Enter Field:</label>
+          <input type="text" id="inField" placeholder="Field...">
+          <label>Enter Year:</label>
+          <input type="number" id="inYear" placeholder="Year...">
+
+          <label for="file" class="upload">Enter Student's Picture:</label> <br>
+          <input type="file" id="file" class="filee" accept="image/*" onchange="loadImage(event)">
+
+
+        </form>
+        <button onclick="generateCard()" value="click" id="generete-card">Generate Card</button>
+      </div>
+    </center>
+
+    <div class="mainn" style="flex-grow: 100">
+      <h2 class="idcard">Generated Id Card</h2>
+
+      <table>
+        <td class="td">
+          <img class="img1" src="" id="imgDisplayed">
+        </td>
+        <td class="td2" rowspan="8">
+          <li>
+            <span class="span1">Name:</span>
+            <span id="name" class="value"> </span>
+          </li>
+          <br>
+          <li>
+            <span class="span1">Birth:</span>
+            <span id="birth" class="value"></span>
+          </li>
+          <br>
+          <li>
+            <span class="span1">Field:</span>
+            <span id="field" class="value"> </span>
+          </li>
+          <br>
+          <li>
+            <span class="span1">Year:</span>
+            <span id="year" class="value"> </span>
+          </li>
+        </td>
+      </table>
+      <!-- </div>
+    </div> -->
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html
